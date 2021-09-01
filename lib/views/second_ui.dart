@@ -32,9 +32,99 @@ class _SecondUIState extends State<SecondUI> {
             ),
           ),
         ],
-
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            UserAccountsDrawerHeader(
+              accountName: Text(
+                'Witchakorn Worawongsuwan',
+              ),
+              accountEmail: Text(
+                'ID : 6135410028',
+              ),
+              currentAccountPicture: CircleAvatar(
+                backgroundImage: AssetImage(
+                  'assets/images/Untitled_Artwork (21).png',
+                ),
+              ),
+              otherAccountsPictures: [
+                Image.asset(
+                  'assets/images/saulogo.png',
+                )
+              ],
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    'assets/images/MicrosoftTeams-image (1).png',
+                  ),
+                  fit: BoxFit.fill,
+                ),
+              ),
+            ),
+            ListTile(
+              onTap: () {},
+              title: Text(
+                'หน้าหลัก',
+              ),
+            ),
+            ListTile(
+              onTap: () {},
+              title: Text(
+                'ตารางสอน',
+              ),
+              leading: Icon(
+                Icons.home,
+              ),
+            ),
+            ListTile(
+              onTap: () {},
+              title: Text(
+                'ตารางสอบ',
+              ),
+              leading: Icon(
+                Icons.ac_unit_sharp,
+              ),
+              trailing: Text(
+                '999',
+                style: TextStyle(
+                  color: Colors.orange,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+            Divider(
+              color: Colors.red,
+            ),
+            ListTile(
+        
+                onTap: () {},
+                title: Text(
+                  'Menu 4',
+                ),
+                trailing: Icon(
+                  Icons.access_alarm,
+                  color: Colors.blue,
+                ),
+                ),
+            Divider(),
+            ListTile(
+              onTap: (){},
+              title: Text(
+                'จบการทำงาน',
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 30.0,
+                ),
+              ),
+              trailing: Icon(
+                Icons.exit_to_app,
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
